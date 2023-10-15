@@ -1,11 +1,11 @@
 import styles from './Avatar.module.css'
-import PropTypes from 'prop-types'
 
-Avatar.propTypes = {
-  src: PropTypes.string.isRequired,
-  alt: PropTypes.string.isRequired,
+interface AvatarProps {
+  hasBorder?: boolean
+  src: string
+  alt?: string
 }
 
-export function Avatar(props) {
+export function Avatar(props: AvatarProps) {
   return <img className={styles.avatar} src={props.src} />
 }
